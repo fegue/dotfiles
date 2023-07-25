@@ -1,0 +1,80 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = """
+$env_var\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$python\
+$conda\
+$character"""
+
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold yellow) "
+disabled = false
+
+[directory]
+style = "blue"
+truncation_length = 2
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[git_branch]
+format = "on [$branch]($style)"
+style = "bright-black"
+#symbol = " "
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "yellow"
+symbol = " "
+
+
+[conda]
+symbol = " "
+format = "[$symbol$environment](purple) "
+
+
+[nix_shell]
+symbol = " "

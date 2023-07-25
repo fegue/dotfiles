@@ -1,0 +1,56 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+$env_var\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$python\
+$cmd_duration\
+$line_break\
+$virtualenv
+$conda\
+$character"""
+
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold yellow) "
+disabled = false
+
+[directory]
+style = "blue"
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+
+[battery]
+full_symbol = "• "
+charging_symbol = "⇡ "
+discharging_symbol = "⇣ "
+unknown_symbol = "❓ "
+empty_symbol = "❗ "
+
+[erlang]
+symbol = "ⓔ "
+
+[nodejs]
+symbol = "[⬢](bold green) "
+
+[pulumi]
+symbol = "🧊 "

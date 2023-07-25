@@ -1,0 +1,2 @@
+alias run_pimod_docker='bash /Users/fegue/Github/ecoPi_Imager/pimod_docker/pimod_docker.sh -r /Users/fegue/Github/ecoPi_Imager'
+alias show_rig="open -a Rig"
