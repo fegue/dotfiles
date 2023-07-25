@@ -1,3 +1,3 @@
 # dotfiles
 
-Use this repoository with [chezmoi](https://www.chezmoi.io/quick-start/)
+Use this repository with [chezmoi](https://www.chezmoi.io/quick-start/)
